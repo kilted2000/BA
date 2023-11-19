@@ -1,15 +1,15 @@
 //import React from 'react';
 
-import NavBarItem from './NavBarItem';
+// import NavBarItem from './NavBarItem';
 
-const AnchorLink = ({ children, href, className, icon, tabIndex, testId }) => {
-  return (
-    <a href={href}>
-      <NavBarItem href={href} className={className} icon={icon} tabIndex={tabIndex} >
-        {children}
-      </NavBarItem>
-    </a>
-  );
-};
+// const AnchorLink = ({ children, href, className, icon, tabIndex, testId }) => {
+//   return (
+//     <a href={href}>
+//       <NavBarItem href={href} className={className} icon={icon} tabIndex={tabIndex} >
+//         {children}
+//       </NavBarItem>
+//     </a>
+//   );
+// };
 
-export default AnchorLink;
+// export default AnchorLink;

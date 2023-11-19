@@ -3,8 +3,8 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw, faBone } from '@fortawesome/free-solid-svg-icons';
-import PageLink from './PageLink';
-import AnchorLink from './AnchorLink';
+//import PageLink from './PageLink';
+//import AnchorLink from './AnchorLink';
 
 
 const Hero = () => {

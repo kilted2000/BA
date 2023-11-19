@@ -1,12 +1,11 @@
 "use client"
 import  { useState } from 'react';
-//import { useUser } from '@auth0/nextjs-auth0/client';
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 
 
 
 import PageLink from './PageLink';
-import AnchorLink from './AnchorLink';
+//import AnchorLink from './AnchorLink';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,10 +1,10 @@
 //import React from 'react';
-import { Alert } from 'reactstrap';
+// import { Alert } from 'reactstrap';
 
-const ErrorMessage = ({ children }) => (
-  <Alert color="danger" fade={false} >
-    {children}
-  </Alert>
-);
+// const ErrorMessage = ({ children }) => (
+//   <Alert color="danger" fade={false} >
+//     {children}
+//   </Alert>
+// );
 
-export default ErrorMessage;
+// export default ErrorMessage;

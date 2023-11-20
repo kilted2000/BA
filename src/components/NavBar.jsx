@@ -5,15 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw, faBone } from '@fortawesome/free-solid-svg-icons';
 
 
-import PageLink from './PageLink';
+//import PageLink from './PageLink';
 //import AnchorLink from './AnchorLink';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, isLoading } = useUser();
+  //const { user, isLoading } = useUser();
   const toggle = () => setIsOpen(!isOpen);
   
-  console.log(user);
+  
   return (
     <>
       <div className="header hislop">
@@ -35,8 +35,8 @@ const NavBar = () => {
                   <NavItem>
                     <NavLink href="#cta">Sign Up</NavLink>
                   </NavItem>
-                  {!isLoading && !user && (
-                    // <NavItem id="qsLoginBtn" className='log'>
+                  {/* {!isLoading && !user && ( */}
+                     <NavItem id="qsLoginBtn" className='log'>
                       <a
                         href="/api/auth/login"
                         className="btn btn-primary btn-margin"
@@ -44,9 +44,9 @@ const NavBar = () => {
                         >
                         Log in
                       </a>
-                    // </NavItem>
-                  )}
-                  {user && (
+                     </NavItem>
+                  {/* )} */}
+                  {/* {user && (
                     <>
                     <Nav
                       id="nav-mobile"
@@ -68,7 +68,7 @@ const NavBar = () => {
                       </NavItem>
                     </Nav>
                     </>
-                  )}
+                  )} */}
                 </Nav>
               </Collapse>
             </Navbar>
@@ -78,11 +78,11 @@ const NavBar = () => {
                 <h1 className="big-heading mb-5">Dog Walking is Better with Two.</h1>
                 <button type="button" className="btn btn-dark btn-lg download-button">
                   <FontAwesomeIcon icon={faPaw} />{' '}
-                  {!isLoading && !user && (
+                  {/* {!isLoading && !user && ( */}
                     <a href="/api/auth/login" tabIndex={0}>
                       Sign In
                     </a>
-                  )}
+                  {/* )} */}
                 </button>
                 <button type="button" className="btn btn-dark btn-lg download-button">
                   <FontAwesomeIcon icon={faBone} /> Sign Up

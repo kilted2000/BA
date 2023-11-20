@@ -1,7 +1,8 @@
 "use client"
 import  { useState } from 'react';
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw, faBone } from '@fortawesome/free-solid-svg-icons';
 
 
 import PageLink from './PageLink';

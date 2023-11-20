@@ -5,9 +5,9 @@ import { faTwitter,faFacebookF,faInstagram,} from '@fortawesome/free-brands-svg-
 const Footer = () => (
 
   <div id="footer" >
-  <a href="https://twitter.com/RichardWhitDev" target="_blank"><FontAwesomeIcon icon={faTwitter} className='sm' /></a>
-  <a href="https://www.facebook.com/richard.whittington.35" target="_blank"><FontAwesomeIcon icon={faFacebookF} className='sm' /></a>
-  <a href="https://www.instagram.com/rlwhttng/" target="_blank"><FontAwesomeIcon icon={faInstagram} className='sm' /></a>
+  <a href="https://twitter.com/RichardWhitDev" target="_blank" rel="noreferrer" ><FontAwesomeIcon icon={faTwitter} className='sm' /></a>
+  <a href="https://www.facebook.com/richard.whittington.35" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookF} className='sm' /></a>
+  <a href="https://www.instagram.com/rlwhttng/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} className='sm' /></a>
   <a href="mailto:richardlwhittington@gmail.com"><FontAwesomeIcon icon={faEnvelope} className='sm' /></a>
   <p className="copyright-text">©Copyright 2023 MilieDog Enterprises</p>
 </div>

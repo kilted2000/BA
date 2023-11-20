@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import { CldImage, CldUploadWidget } from "@cloudinary/url-gen";
@@ -51,7 +51,7 @@ const ProfileForm = ( {images} ) => {
         <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
       </label>
       <label>
-        Dog's Name:
+        Dog&#39;s Name:
         <input type="text" value={dogName} onChange={e => setDogName(e.target.value)} />
       </label>
       <label>
@@ -115,6 +115,17 @@ const ProfileForm = ( {images} ) => {
       <button type="submit">Save Profile</button>
     </form>
   );
+};
+
+
+ProfileForm.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ProfileForm;

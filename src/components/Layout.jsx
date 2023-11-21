@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
         crossOrigin="anonymous"
       /> 
       <link rel="stylesheet" href="https://cdn.auth0.com/js/auth0-samples-theme/1.0/css/auth0-theme.min.css" />
-      <title>BarkAmigos</title>
+      <title>LarkAmigos</title>
     </head>
     <main id="app" className="d-flex flex-column h-100">
       <NavBar />

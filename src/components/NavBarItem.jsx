@@ -1,9 +1,9 @@
 "use client"
-import React from 'react';
+//import React from 'react';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const NavBarItem = ({ children, href, className, icon, tabIndex, testId }) => {
+import PropTypes from 'prop-types';
+const NavBarItem = ({ children, href, className, icon, tabIndex }) => {
   const router = useRouter();
    const activeClass = 'navbar-item-active';
   const activeClasses = className ? `${className} ${activeClass}` : activeClass;
@@ -17,5 +17,12 @@ const NavBarItem = ({ children, href, className, icon, tabIndex, testId }) => {
     </span>
   );
 };
-
+NavBarItem.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  icon: PropTypes.object,
+  tabIndex: PropTypes.number,
+  testId: PropTypes.string,
+};
 export default NavBarItem;

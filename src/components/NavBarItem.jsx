@@ -1,17 +1,17 @@
 "use client"
 //import React from 'react';
-import { useRouter } from 'next/router';
+import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 const NavBarItem = ({ children, href, className, icon, tabIndex }) => {
-  const router = useRouter();
+  const location = useLocation();
    const activeClass = 'navbar-item-active';
   const activeClasses = className ? `${className} ${activeClass}` : activeClass;
 
   return (
     <span className="d-inline-flex align-items-center navbar-item">
       {icon && <FontAwesomeIcon icon={icon} className="mr-3" />}
-      <span className={router.asPath === href ? activeClasses : className} tabIndex={tabIndex} >
+      <span className={location.pathname === href ? activeClasses : className} tabIndex={tabIndex} >
         {children}
       </span>
     </span>

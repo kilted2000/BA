@@ -1,37 +1,42 @@
-// import { useEffect, useState, useRef } from 'react';
-// import hljs from 'highlight.js/lib/core';
-// import json from 'highlight.js/lib/languages/json';
+import { useEffect, useState, useRef } from 'react';
+import hljs from 'highlight.js/lib/core';
+import json from 'highlight.js/lib/languages/json';
+import PropTypes from 'prop-types';
+import 'highlight.js/styles/monokai-sublime.css';
 
-// import 'highlight.js/styles/monokai-sublime.css';
+const Highlight = ({ children }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const codeNode = useRef();
+  const language = 'json';
 
-// const Highlight = ({ children, testId }) => {
-//   const [isLoaded, setIsLoaded] = useState(false);
-//   const codeNode = useRef();
-//   const language = 'json';
+  useEffect(() => {
+    try {
+      hljs.registerLanguage(language, json);
+      setIsLoaded(true);
+    } catch (error) {
+      console.error(error);
+      throw Error(`Cannot register the language ${language}`);
+    }
+  }, []);
 
-//   useEffect(() => {
-//     try {
-//       hljs.registerLanguage(language, json);
-//       setIsLoaded(true);
-//     } catch (error) {
-//       console.error(error);
-//       throw Error(`Cannot register the language ${language}`);
-//     }
-//   }, []);
+  useEffect(() => {
+    codeNode && codeNode.current && hljs.highlightBlock(codeNode.current);
+  });
 
-//   useEffect(() => {
-//     codeNode && codeNode.current && hljs.highlightBlock(codeNode.current);
-//   });
+  if (!isLoaded) return null;
 
-//   if (!isLoaded) return null;
+  return (
+    <pre className="rounded" >
+      <code ref={codeNode} className={language}>
+        {children}
+      </code>
+    </pre>
+  );
+};
 
-//   return (
-//     <pre className="rounded" >
-//       <code ref={codeNode} className={language}>
-//         {children}
-//       </code>
-//     </pre>
-//   );
-// };
 
-// export default Highlight;
+Highlight.propTypes = {
+    children: PropTypes.node.isRequired,
+  
+  };
+ export default Highlight;

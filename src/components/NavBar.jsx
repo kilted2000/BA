@@ -21,7 +21,7 @@ const NavBar = () => {
           <div className="container-fluid navcon" >
              <Navbar light expand="lg" id="links" > 
                <NavbarBrand id="heading" href="/">
-                <img src="public/assets/namenoback.png" alt="BarkAmigos Title" className="cover" />
+                <img src="/assets/namenoback.png" alt="BarkAmigos Title" className="cover" />
               </NavbarBrand>  
               <NavbarToggler onClick={toggle} />
               <Collapse isOpen={isOpen} navbar>
@@ -89,7 +89,7 @@ const NavBar = () => {
                 </button>
               </div>
               <div className="phone-img col-md-6 col-sm-12">
-                <img className="rotate_image img-fluid title-image" src="public/assets/img-clear.jpeg" alt="logo-mockup" />
+                <img className="rotate_image img-fluid title-image" src="/assets/img-clear.jpeg" alt="logo-mockup" />
               </div>
             </div>
           </div>

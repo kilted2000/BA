@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Auth0Provider>,
+  </Auth0Provider>
   </HelmetProvider>
 )
 

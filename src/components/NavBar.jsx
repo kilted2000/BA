@@ -107,16 +107,17 @@ const NavBar = () => {
                 >
                   <FontAwesomeIcon icon={faPaw} />{" "}
                   {!isLoading && !user && (
-                    <a href="/api/auth/login" tabIndex={0}>
+                    <a onClick={() => loginWithRedirect()}>
                       Sign In
                     </a>
                   )}
                 </button>
                 <button
                   type="button"
-                  className="btn btn-dark btn-lg download-button"
+                  className="btn btn-dark btn-lg download-button"  onClick={() => loginWithRedirect({ screen_hint: 'signup' })}
+                  
                 >
-                  <FontAwesomeIcon icon={faBone} /> Sign Up
+                  <FontAwesomeIcon icon={faBone} /> Sigmmn Up
                 </button>
               </div>
               <div className="phone-img col-md-6 col-sm-12">

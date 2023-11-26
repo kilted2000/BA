@@ -1,6 +1,6 @@
 "use client"
 //import React from 'react';
-
+import { useAuth0 } from "@auth0/auth0-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw, faBone } from '@fortawesome/free-solid-svg-icons';
 //import PageLink from './PageLink';
@@ -8,7 +8,7 @@ import { faPaw, faBone } from '@fortawesome/free-solid-svg-icons';
 
 
 const Hero = () => {
-
+  const { loginWithRedirect } = useAuth0()
 return(
   <>
 <div className="row testing ">
@@ -18,9 +18,9 @@ return(
                 <button type="button" className="btn btn-dark btn-lg download-button">
                   <FontAwesomeIcon icon={faPaw} />
                 
-                    <a href="/api/auth/login" tabIndex={0}>
-                      Sign In
-                    </a>
+                  <a onClick={() => loginWithRedirect()}>
+                        Log In
+                      </a>
                   
                 </button>
                 <button type="button" className="btn btn-dark btn-lg download-button">

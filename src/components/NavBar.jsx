@@ -68,7 +68,7 @@ const NavBar = () => {
                         navbar
                       >
                         <NavItem>
-                          <PageLink href="../profile.jsx">My Profile</PageLink>
+                          <PageLink href="../ProfileForm.jsx">My Profile</PageLink>
                         </NavItem>
                         <NavItem id="qsLogoutBtn">
                           {/* <PageLink

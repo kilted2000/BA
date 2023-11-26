@@ -1,12 +1,13 @@
 
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-
+import { useAuth0 } from "@auth0/auth0-react";
 import { CldImage, CldUploadWidget } from "@cloudinary/url-gen";
 
 
 
 const ProfileForm = ( {images} ) => {
+  const { isAuthenticated } = useAuth0();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState([]);
@@ -37,6 +38,7 @@ const ProfileForm = ( {images} ) => {
   };
 
   return (
+    isAuthenticated && (
     <form onSubmit={handleSubmit}>
       <label>
         First Name:
@@ -114,7 +116,7 @@ const ProfileForm = ( {images} ) => {
 
       <button type="submit">Save Profile</button>
     </form>
-  );
+  ));
 };
 
 

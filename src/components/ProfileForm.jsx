@@ -66,7 +66,7 @@ const ProfileForm = ( {images} ) => {
       </label>
       <label>
         Photos of Doggie:
-        <CldUploadWidget uploadPreset="barkamigos-dog-photos" onUpload={handlePhotoUpload}>
+         <CldUploadWidget uploadPreset="barkamigos-dog-photos" onUpload={handlePhotoUpload}>
           {({ open }) => {
             function handleOnClick(e) {
               e.preventDefault();
@@ -78,7 +78,7 @@ const ProfileForm = ( {images} ) => {
               </button>
             );
           }}
-        </CldUploadWidget>
+        </CldUploadWidget> 
       </label>
       <ul>
         {images?.map(image => {
@@ -95,7 +95,7 @@ const ProfileForm = ( {images} ) => {
   
           );
         })}
-      </ul> 
+      </ul>  
      
       <div className="form-check">
         <input

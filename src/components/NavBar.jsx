@@ -12,7 +12,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw, faBone } from "@fortawesome/free-solid-svg-icons";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import ProfileForm from "./ProfileForm";
 import PageLink from "./PageLink";
 //import AnchorLink from './AnchorLink';
 
@@ -68,7 +68,7 @@ const NavBar = () => {
                         navbar
                       >
                         <NavItem>
-                          <PageLink href="../ProfileForm.jsx">My Profile</PageLink>
+                          <PageLink href={ ProfileForm }>My Profile</PageLink>
                         </NavItem>
                         <NavItem id="qsLogoutBtn">
                           {/* <PageLink

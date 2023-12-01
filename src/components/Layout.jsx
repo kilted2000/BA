@@ -3,7 +3,7 @@ import { Container } from "reactstrap"
 
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
-import NavBar from './NavBar';
+//import NavBar from './NavBar';
 import Footer from './Footer';
 //import Mapping from '../components/Mapping'
 
@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
       <title>BarkAmigos</title>
     </Helmet>
     <main id="app" className="d-flex flex-column h-100">
-      <NavBar />
+      {/* <NavBar /> */}
       <Container className="container flex-grow-1 mt-5">{children}</Container>
       <Footer />
     </main>

@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
 import {fill} from "@cloudinary/url-gen/actions/resize";

@@ -27,9 +27,9 @@ return(
                   <FontAwesomeIcon icon={faBone} /> Sign Up
                 </button>
               </div>
-              {/* <div className="phone-img col-md-6 col-sm-12">
-                <img className="rotate_image img-fluid title-image" src="public/assets/img-clear.jpeg" alt="logo-mockup" />
-              </div> */}
+              <div className="phone-img col-md-6 col-sm-12">
+                <img className="rotate_image img-fluid title-image" src="/assets/img-clear.jpeg" alt="logo-mockup" />
+              </div>
               </div>
             
             </>

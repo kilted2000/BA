@@ -22,8 +22,6 @@ const Content = () => (
       <i className="fa-regular fa-calendar-days fa-3x fi"></i>
       <h3 className="feature">Integrated Calendar.</h3>
       <p className="fd">Never miss a doggie date.</p>
-      <a href="/profile">Profile 1</a>
-      <a href="/profilePage">profile 2</a>
     </div>
   </div>
   </div>

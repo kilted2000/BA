@@ -47,19 +47,19 @@ const NavBar = () => {
                     <NavLink href="#cta">Sign Up</NavLink>
                   </NavItem>
                   {!isLoading && !user && (
-                    <NavItem id="qsLoginBtn" className="log">
+                    <NavLink id="qsLoginBtn" className="log">
                       <a
                         href="/api/auth/login"
                         className="btn btn-primary btn-margin"
-                        
+                        onClick={() => loginWithRedirect({ screen_hint: 'signup' })}
                         >
-                        Log in
+                        Sign In
                       </a>
                       {/* turn buttons into navlinks */}
-                      <button className="btn btn-primary btn-margin" onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>
+                      {/* <button className="btn btn-primary btn-margin" onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>
                         sign up
-                      </button>
-                    </NavItem>
+                      </button> */}
+                    </NavLink>
                   )}
                   {user && (
                     <>

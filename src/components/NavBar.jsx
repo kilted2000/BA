@@ -1,4 +1,4 @@
-"use client";
+
 import { useState } from "react";
 import {
   Navbar,
@@ -20,6 +20,16 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isLoading, loginWithRedirect, logout } = useAuth0();
   const toggle = () => setIsOpen(!isOpen);
+  const handleSignUp = async () => {
+    await loginWithRedirect({
+      appState: {
+        returnTo: "/profile",
+      },
+      authorizationParams: {
+        screen_hint: "signup",
+      },
+    });
+  };
 
   return (
     <>
@@ -47,11 +57,12 @@ const NavBar = () => {
                     <NavLink href="#cta">Sign Up</NavLink>
                   </NavItem>
                   {!isLoading && !user && (
+                    <>
                     <NavLink id="qsLoginBtn" className="log">
                       <a
                         href="/api/auth/login"
                         className="btn btn-primary btn-margin"
-                        onClick={() => loginWithRedirect({ screen_hint: 'signup' })}
+                        onClick={() => loginWithRedirect()}
                         >
                         Sign In
                       </a>
@@ -60,6 +71,12 @@ const NavBar = () => {
                         sign up
                       </button> */}
                     </NavLink>
+                    <NavLink id="qsLoginBtn" className="log">
+                      <button
+                      className="btn btn-primary btn-margin"
+                      onClick={handleSignUp}>Sign Up</button>
+                      </NavLink>
+</>
                   )}
                   {user && (
                     <>

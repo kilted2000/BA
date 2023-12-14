@@ -2,7 +2,10 @@
 //import {Cloudinary} from "@cloudinary/url-gen";
 //import {AdvancedImage} from '@cloudinary/react';
 //import {fill} from "@cloudinary/url-gen/actions/resize";
-import Page from './Page'
+import Content from './components/Content';
+import Pricing from './components/pricing';
+import Cta from './components/Cta';
+import Hero from './components/Hero';
 import Layout from './components/Layout'
 import './App.css'
 
@@ -19,7 +22,10 @@ function App() {
         {/* <div>
       <AdvancedImage cldImg={myImage} />
     </div> */}
-     <Page />
+      <Hero />
+      <Content />
+      <Pricing />
+      <Cta />
     </Layout>
   )
 }

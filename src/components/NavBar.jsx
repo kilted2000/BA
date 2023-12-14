@@ -80,6 +80,7 @@ const NavBar = () => {
                   )}
                   {user && (
                     <>
+                  
                       <Nav
                         id="nav-mobile"
                         className="justify-content-between "

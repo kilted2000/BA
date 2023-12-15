@@ -12,7 +12,7 @@ import {
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faPaw, faBone } from "@fortawesome/free-solid-svg-icons";
 import { useAuth0 } from "@auth0/auth0-react";
-import ProfileForm from "./ProfileForm";
+import Profile from "./Profile";
 import PageLink from "./PageLink";
 //import AnchorLink from './AnchorLink';
 
@@ -87,7 +87,7 @@ const NavBar = () => {
                         navbar
                       >
                         <NavItem>
-                          <PageLink href={ ProfileForm }>My Profile</PageLink>
+                          <PageLink href={ Profile }>My Profile</PageLink>
                         </NavItem>
                         <NavItem id="qsLogoutBtn">
                           <PageLink
@@ -114,7 +114,14 @@ const NavBar = () => {
                 </Nav>
               </Collapse>
             </Navbar>
+            </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
+export default NavBar;
             {/* const Cta = () => {
   
   const { user, isLoading } = useUser();
@@ -165,14 +172,14 @@ const NavBar = () => {
                 />
               </div>
             </div> */}
-          </div>
+          {/* </div>
         </div>
       </div>
     </>
   );
 };
 
-export default NavBar;
+export default NavBar; */}
 
 
 // const NavBar = () => {

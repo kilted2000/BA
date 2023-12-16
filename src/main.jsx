@@ -1,4 +1,4 @@
-//import React from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async';
 import { Auth0Provider } from '@auth0/auth0-react';
@@ -15,9 +15,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       redirect_uri: window.location.origin
     }}
   >
+    <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </React.StrictMode>
   </Auth0Provider>
   </HelmetProvider>
 )

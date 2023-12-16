@@ -23,7 +23,7 @@ const NavBar = () => {
   const handleSignUp = async () => {
     await loginWithRedirect({
       appState: {
-        returnTo: "/profile",
+        returnTo: "./Profile",
       },
       authorizationParams: {
         screen_hint: "signup",
@@ -58,14 +58,14 @@ const NavBar = () => {
                   </NavItem>
                   {!isLoading && !user && (
                     <>
-                    <NavLink id="qsLoginBtn" className="log">
-                      <a
-                        href="/api/auth/login"
-                        className="btn btn-primary btn-margin"
-                        onClick={() => loginWithRedirect()}
-                        >
+                    <NavLink id="qsLoginBtn" className="log"  href="/api/auth/login"
+                        
+                        onClick={() => loginWithRedirect()}>
+                      
+                       
+                        
                         Sign In
-                      </a>
+                      
                       {/* turn buttons into navlinks */}
                       {/* <button className="btn btn-primary btn-margin" onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>
                         sign up
@@ -90,12 +90,12 @@ const NavBar = () => {
                           <PageLink href={ Profile }>My Profile</PageLink>
                         </NavItem>
                         <NavItem id="qsLogoutBtn">
-                          <PageLink
+                          {/* <PageLink
                           href="/api/auth/logout"
                           className="btn btn-link p-1"
                          >
                           Log out
-                        </PageLink>
+                        </PageLink> */}
                           <button className="btn btn-link p-1"
                             onClick={() =>
                               logout({
@@ -105,7 +105,7 @@ const NavBar = () => {
                               })
                             }
                           >
-                            Log Out2
+                            Log Out
                           </button>
                         </NavItem>
                       </Nav>

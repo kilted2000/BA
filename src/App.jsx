@@ -2,14 +2,14 @@
 //import {Cloudinary} from "@cloudinary/url-gen";
 //import {AdvancedImage} from '@cloudinary/react';
 //import {fill} from "@cloudinary/url-gen/actions/resize";
-import Content from './components/Content';
-import Pricing from './components/pricing';
-import Cta from './components/Cta';
-import Hero from './components/Hero';
 import Layout from './components/Layout'
+import {  Route, Routes } from 'react-router-dom'
+import  Page from './Page'
+import  Profile  from './components/Profile'
 import './App.css'
 
 function App() {
+
   // const cld = new Cloudinary({
   //   cloud: {
   //     cloudName: 'dcqqva4tp'
@@ -19,13 +19,15 @@ function App() {
   // myImage.resize(fill().width(250).height(250));
   return (
     <Layout>
+    <Routes>
+       <Route path="/" element={<Page />} />
+        <Route path="/profile" element={<Profile />} /> 
+       
+    </Routes>
         {/* <div>
       <AdvancedImage cldImg={myImage} />
     </div> */}
-      <Hero />
-      <Content />
-      <Pricing />
-      <Cta />
+   
     </Layout>
   )
 }

@@ -6,6 +6,8 @@ import Layout from './components/Layout'
 import {  Route, Routes } from 'react-router-dom'
 import  Page from './Page'
 import  Profile  from './components/Profile'
+import { Callback } from './components/Callback'
+
 import './App.css'
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
     <Layout>
     <Routes>
        <Route path="/" element={<Page />} />
-        <Route path="/profile" element={<Profile />} /> 
+       <Route path="/profile" element={<Profile />} /> 
+        <Route path="/callback" element={<Callback />} />
        
     </Routes>
         {/* <div>

@@ -23,10 +23,21 @@ const NavBar = () => {
   const handleSignUp = async () => {
     await loginWithRedirect({
       appState: {
-        returnTo: "./Profile",
+        returnTo: "/profile",
       },
       authorizationParams: {
         screen_hint: "signup",
+      },
+    });
+  };
+  
+  const handleSignIn = async () => {
+    await loginWithRedirect({
+      appState: {
+        returnTo: "/profile",
+      },
+      authorizationParams: {
+        screen_hint: "signin",
       },
     });
   };
@@ -58,13 +69,17 @@ const NavBar = () => {
                   </NavItem>
                   {!isLoading && !user && (
                     <>
-                    <NavLink id="qsLoginBtn" className="log"  href="/api/auth/login"
+                    <NavLink id="qsLoginBtn" className="log" href="/api/auth/login" 
                         
-                        onClick={() => loginWithRedirect()}>
+                        // onClick={(handleSignIn) => loginWithRedirect({
+                        //   appState: {
+                        //     returnTo: "/profile",
+                        //   },
+                        // })}>
+                      onClick={handleSignIn}>
                       
-                       
                         
-                        Sign In
+                        Sign INN
                       
                       {/* turn buttons into navlinks */}
                       {/* <button className="btn btn-primary btn-margin" onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>
@@ -74,7 +89,7 @@ const NavBar = () => {
                     <NavLink id="qsLoginBtn" className="log">
                       <button
                       className="btn btn-primary btn-margin"
-                      onClick={handleSignUp}>Sign Up</button>
+                      onClick={handleSignUp}>Sign$ Up</button>
                       </NavLink>
 </>
                   )}

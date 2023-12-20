@@ -5,7 +5,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import  AuthProvider  from './AuthProvider'
+// import  AuthProvider  from './AuthProvider'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <HelmetProvider>
 <Auth0Provider
@@ -17,9 +17,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   >
     <React.StrictMode>
     <BrowserRouter>
-    <AuthProvider>
+    {/* <AuthProvider>
       <App />
-      </AuthProvider>
+      </AuthProvider> */}
+      <App />
     </BrowserRouter>
     </React.StrictMode>
   </Auth0Provider>

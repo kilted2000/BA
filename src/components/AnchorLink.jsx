@@ -1,14 +1,15 @@
 //import React from 'react';
 import PropTypes from 'prop-types';
 import NavBarItem from './NavBarItem';
+import { Link } from "react-router-dom";
 
 const AnchorLink = ({ children, href, className, icon, tabIndex }) => {
   return (
-    <a href={href}>
-      <NavBarItem href={href} className={className} icon={icon} tabIndex={tabIndex} >
+    <Link to={href}>
+       <NavBarItem to={href} className={className} icon={icon} tabIndex={tabIndex} >
         {children}
       </NavBarItem>
-    </a>
+    </Link>
   );
 };
 

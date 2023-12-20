@@ -1,22 +1,22 @@
-//import React from 'react';
+// //import React from 'react';
 
-
+//import { Link } from "react-router-dom";
 import NavBarItem from './NavBarItem';
 import PropTypes from 'prop-types';
-const PageLink = ({ children, href, className, icon, tabIndex, testId }) => {
+const PageLink = ({ children, className, icon, tabIndex, testId, to }) => {
   return (
-    <a data-legacyBehavior href={href}>
-      <a>
-        <NavBarItem href={href} className={className} icon={icon} tabIndex={tabIndex} testId={testId}>
+   
+      
+        <NavBarItem to={to} className={className} icon={icon} tabIndex={tabIndex} testId={testId}>
           {children}
         </NavBarItem>
-      </a>
-    </a>
+      
+   
   );
 };
 PageLink.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
+  to: PropTypes.string,
   className: PropTypes.string,
   icon: PropTypes.object,
   tabIndex: PropTypes.number,

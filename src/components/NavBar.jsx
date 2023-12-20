@@ -31,16 +31,16 @@ const NavBar = () => {
     });
   };
   
-  const handleSignIn = async () => {
-    await loginWithRedirect({
-      appState: {
-        returnTo: "/profile",
-      },
-      authorizationParams: {
-        screen_hint: "signin",
-      },
-    });
-  };
+  // const handleSignIn = async () => {
+  //   await loginWithRedirect({
+  //     appState: {
+  //       returnTo: "/profile",
+  //     },
+  //     authorizationParams: {
+  //       screen_hint: "signin",
+  //     },
+  //   });
+  // };
 
   return (
     <>
@@ -70,13 +70,8 @@ const NavBar = () => {
                   {!isLoading && !user && (
                     <>
                     <NavLink id="qsLoginBtn" className="log" href="/api/auth/login" 
-                        
-                        // onClick={(handleSignIn) => loginWithRedirect({
-                        //   appState: {
-                        //     returnTo: "/profile",
-                        //   },
-                        // })}>
-                      onClick={handleSignIn}>
+                        onClick={loginWithRedirect}>
+                 
                       
                         
                         Sign INN

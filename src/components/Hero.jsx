@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw, faBone } from '@fortawesome/free-solid-svg-icons';
 //import PageLink from './PageLink';
 //import AnchorLink from './AnchorLink';
-
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { loginWithRedirect } = useAuth0()
@@ -18,9 +18,9 @@ return(
                 <button type="button" className="btn btn-dark btn-lg download-button">
                   <FontAwesomeIcon icon={faPaw} />
                 
-                  <a onClick={() => loginWithRedirect()}>
+                  <Link onClick={() => loginWithRedirect()}>
                         Log In
-                      </a>
+                      </Link>
                   
                 </button>
                 <button type="button" className="btn btn-dark btn-lg download-button">

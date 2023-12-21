@@ -20,14 +20,15 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isLoading, loginWithRedirect, logout } = useAuth0();
   const toggle = () => setIsOpen(!isOpen);
+
   const handleSignUp = async () => {
     await loginWithRedirect({
       appState: {
         returnTo: "/profile",
       },
-      authorizationParams: {
-        screen_hint: "signup",
-      },
+      // authorizationParams: {
+      //   screen_hint: "signup",
+      // },
     });
   };
   
@@ -70,7 +71,7 @@ const NavBar = () => {
                   {!isLoading && !user && (
                     <>
                     <NavLink id="qsLoginBtn" className="log" href="/api/auth/login" 
-                        onClick={loginWithRedirect}>
+                        onClick={handleSignUp}>
                  
                       
                         

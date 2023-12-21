@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
  const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
-  const domain = 'http//localhost:5173';
+  const domain = 'localhost:5173/';
   const clientId = 'jXWEdnff71BHchUso3LGIAKIUadip166';
-  const redirectUri = 'http//localhost:5173';
+  const redirectUri = 'localhost:5173/';
 
   const onRedirectCallback = (appState) => {
     navigate(appState?.returnTo || window.location.pathname);

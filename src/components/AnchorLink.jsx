@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import NavBarItem from './NavBarItem';
 import { Link } from "react-router-dom";
 
-const AnchorLink = ({ children, href, className, icon, tabIndex }) => {
+const AnchorLink = ({ children, to, className, icon, tabIndex }) => {
   return (
-    <Link to={href}>
-       <NavBarItem to={href} className={className} icon={icon} tabIndex={tabIndex} >
+    <Link to={to}>
+       <NavBarItem to={to} className={className} icon={icon} tabIndex={tabIndex} >
         {children}
       </NavBarItem>
     </Link>
@@ -15,7 +15,7 @@ const AnchorLink = ({ children, href, className, icon, tabIndex }) => {
 
 AnchorLink.propTypes = {
     children: PropTypes.node.isRequired,
-    href: PropTypes.string.isRequired,
+    to: PropTypes.string,
     className: PropTypes.string,
     icon: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
